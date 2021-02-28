@@ -1,5 +1,13 @@
 /* add css module styles here (optional) */
 
+.HorizontalSliderRoot {
+  overflow: hidden;
+}
+
+.HorizontalSliderElementsBox {
+  display: flex;
+}
+
 .test {
   margin: 2em;
   padding: 0.5em;
