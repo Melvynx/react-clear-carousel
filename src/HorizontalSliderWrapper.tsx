@@ -15,11 +15,15 @@ const HorizontalSliderContext = React.createContext<HorizontalSliderContextProps
 export function HorizontalSliderWrapper<T extends ElementId>({
   datas,
   currentSize,
-  children
+  children,
+  reverse,
+  transition
 }: HorizontalSliderWrapperProps<T>) {
   const { classes, setSlide, nextSlide, prevSlide } = useSimpleSlider({
     listLength: datas.length,
-    size: currentSize
+    size: currentSize,
+    reverse,
+    transition
   })
 
   return (

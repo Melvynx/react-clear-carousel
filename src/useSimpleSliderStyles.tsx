@@ -2,11 +2,13 @@ import * as React from 'react'
 import { HorizontalSliderStylesProps } from './types'
 
 /*
- *Creation of a custom style hook to avoid using a third party library.
+ * Creation of a custom style hook to avoid using a third party library.
  */
 export function useSimpleSliderStyles({
   size,
-  currentSlide
+  currentSlide,
+  reverse,
+  transition
 }: HorizontalSliderStylesProps) {
   const uniqueId = React.useRef(
     'slider' + Math.random().toString(36).substr(2, 9)
@@ -32,7 +34,7 @@ export function useSimpleSliderStyles({
     style.current.innerHTML = `
 .${currentClasses.card} {
   width: ${size.element}px;
-  margin-right: ${size.margin}px;
+  margin-${reverse ? 'left' : 'right'}: ${size.margin}px;
   cursor: pointer;
 }
 
@@ -41,11 +43,11 @@ export function useSimpleSliderStyles({
 }
 
 .${currentClasses.flexBox} {
-  transition: transform .3s ease-in-out;
-  transform: translate(-${translatePixel}px);
+  transition: ${transition ? transition : 'transform .3s ease-in-out'};
+  transform: translate(${reverse ? '+' : '-'}${translatePixel}px);
   display: flex;
 }`
-  }, [classes, currentSlide, size.element, size.margin])
+  }, [classes, currentSlide, size.element, size.margin, reverse, transition])
 
   return classes.current
 }

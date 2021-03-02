@@ -1,6 +1,6 @@
+import { useStyletron } from 'baseui'
 import { Block } from 'baseui/block'
 import React from 'react'
-
 import {
   HorizontalSlider,
   HorizontalSliderWrapper,
@@ -8,40 +8,46 @@ import {
   PrevSlideAction,
   SliderElementProps
 } from 'react-simple-slider'
-
-const datas = [
-  { id: 0, text: 'h' },
-  { id: 1, text: 'e' },
-  { id: 2, text: 'l' },
-  { id: 3, text: 'l' },
-  { id: 4, text: 'o' },
-  { id: 5, text: '_' },
-  { id: 6, text: 'w' },
-  { id: 7, text: 'o' },
-  { id: 8, text: 'r' },
-  { id: 9, text: 'l' },
-  { id: 10, text: 'd' },
-  { id: 11, text: 's' },
-  { id: 12, text: '!' }
-]
+import { datas } from './datas'
+import Exemple1Form from './Exemple1Form'
 
 const Exemple1 = () => {
+  const [reverseChecked, setReverseChecked] = React.useState(false)
+  const [transition, setTransition] = React.useState(
+    'transform .3s ease-in-out'
+  )
+  const [css] = useStyletron()
+
   return (
-    <Block width={['200px', '400px', '400px']}>
-      <HorizontalSliderWrapper
-        datas={datas}
-        currentSize={{ element: 116, margin: 10 }}
-      >
-        <HorizontalSlider>
-          <Element />
-        </HorizontalSlider>
-        <PrevSlideAction>
-          <button>Prev</button>
-        </PrevSlideAction>
-        <NextSlideAction>
-          <button>Next</button>
-        </NextSlideAction>
-      </HorizontalSliderWrapper>
+    <Block width='100%' display='flex' justifyContent='center'>
+      <Exemple1Form
+        reverseChecked={reverseChecked}
+        setReverseChecked={setReverseChecked}
+        transition={transition}
+        setTransition={setTransition}
+      />
+      <Block width={['200px', '400px', '400px']}>
+        <HorizontalSliderWrapper
+          transition={transition}
+          reverse={reverseChecked}
+          datas={datas}
+          currentSize={{ element: 116, margin: 10 }}
+        >
+          <HorizontalSlider
+            elementBoxClassname={css({
+              flexDirection: reverseChecked ? 'row-reverse' : 'row'
+            })}
+          >
+            <Element />
+          </HorizontalSlider>
+          <PrevSlideAction>
+            <button>Prev</button>
+          </PrevSlideAction>
+          <NextSlideAction>
+            <button>Next</button>
+          </NextSlideAction>
+        </HorizontalSliderWrapper>
+      </Block>
     </Block>
   )
 }
@@ -49,15 +55,11 @@ const Exemple1 = () => {
 const Element = ({
   className,
   data
-}: SliderElementProps<{ id: number; text: string }>) => {
+}: SliderElementProps<{ id: number; text: string; color: string }>) => {
   return (
     <div className={className}>
-      <Block
-        backgroundColor='backgroundSecondary'
-        color='colorPrimary'
-        padding='8px'
-      >
-        <p>id: {data?.text}</p>
+      <Block backgroundColor={data?.color} color='colorPrimary' padding='8px'>
+        <p>{data?.text}</p>
       </Block>
     </div>
   )

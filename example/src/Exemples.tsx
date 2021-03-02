@@ -31,7 +31,6 @@ export default function Exemples() {
     >
       <HeadingLevel>
         <Heading>react-simple-slider</Heading>
-        <StyledLink href='https://github.com'>Github</StyledLink>
         <p className={paragraph}>
           Simple slider made in React easily customizable.
         </p>
@@ -39,6 +38,9 @@ export default function Exemples() {
           Here is an example to help you. The source code for these examples is
           on github.
         </p>
+        <StyledLink href='https://github.com'>
+          API and more info on Github
+        </StyledLink>
         <ExempleWrapper
           title='Exemple 1'
           description='Slider with very little basic code. It is possible to see several cards. Try clicking on a map, it will be displayed first.'

@@ -16,7 +16,6 @@ export default function Hello() {
           display='flex'
           minHeight='100vh'
           padding={['8px', '16px', '32px']}
-          paddingTop={0}
         >
           <Exemples />
         </Block>

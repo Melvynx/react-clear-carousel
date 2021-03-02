@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, StyledContents, StyledTitle } from 'baseui/card'
+import { Card, StyledContents } from 'baseui/card'
 import { Block } from 'baseui/block'
 
 import {
@@ -9,14 +9,7 @@ import {
   PrevSlideAction,
   SliderElementProps
 } from 'react-simple-slider'
-
-const datas = [
-  { id: 0, text: 'yesterday', title: 'good day' },
-  { id: 1, text: 'sunday', title: 'bad day' },
-  { id: 2, text: 'wedsday', title: 'no day' },
-  { id: 3, text: 'monday', title: 'next day' },
-  { id: 4, text: 'monday too', title: 'best day' }
-]
+import { datas, DatasTypes } from './datas'
 
 const Exemple3 = () => {
   return (
@@ -39,15 +32,23 @@ const Exemple3 = () => {
   )
 }
 
-const Element = ({
-  className,
-  data
-}: SliderElementProps<{ id: number; text: string; title: string }>) => {
+const Element = ({ className, data }: SliderElementProps<DatasTypes>) => {
   return (
     <div className={className}>
-      <Card>
-        <StyledTitle>{data?.title}</StyledTitle>
-        <StyledContents>{data?.text}</StyledContents>
+      <Card
+        overrides={{
+          Root: {
+            style: () => ({
+              backgroundColor: data?.color
+            })
+          }
+        }}
+      >
+        <StyledContents>
+          <p>
+            Dog name:<span style={{ fontWeight: 'bold' }}>{data?.text}</span>
+          </p>
+        </StyledContents>
       </Card>
     </div>
   )
