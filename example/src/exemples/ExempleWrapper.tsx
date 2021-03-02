@@ -2,6 +2,7 @@ import { Block } from 'baseui/block'
 import { Paragraph1 } from 'baseui/typography'
 import React from 'react'
 import { useStyletron } from 'baseui'
+import { Heading } from 'baseui/heading'
 
 type ExempleWrapperProps = {
   title: string
@@ -25,7 +26,7 @@ export default function ExempleWrapper({
       display='flex'
       flexDirection='column'
     >
-      <h3
+      <Heading styleLevel={3}
         className={css({
           margin: '0',
           fontSize: '32px',
@@ -33,7 +34,7 @@ export default function ExempleWrapper({
         })}
       >
         {title}
-      </h3>
+      </Heading>
       <Paragraph1>{description}</Paragraph1>
       <Block display='flex' justifyContent='center'>
         {children}

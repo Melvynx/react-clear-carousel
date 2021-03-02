@@ -3,8 +3,8 @@ import { Card, StyledContents, StyledTitle } from 'baseui/card'
 import { Block } from 'baseui/block'
 
 import {
-  HorizontalSlider,
-  HorizontalSliderWrapper,
+  HorizontalCarousel,
+  HorizontalCarouselWrapper,
   NextSlideAction,
   PrevSlideAction,
   SliderElementProps
@@ -24,11 +24,11 @@ const Exemple4 = () => {
 
   return (
     <Block width={'400px'}>
-      <HorizontalSliderWrapper
+      <HorizontalCarouselWrapper
         datas={datas}
         currentSize={{ element: 200, margin: 10 }}
       >
-        <HorizontalSlider
+        <HorizontalCarousel
           rootClassname={css({
             border: '1px solid red'
           })}
@@ -38,14 +38,14 @@ const Exemple4 = () => {
           })}
         >
           <Element />
-        </HorizontalSlider>
+        </HorizontalCarousel>
         <PrevSlideAction>
           <button>Prev</button>
         </PrevSlideAction>
         <NextSlideAction>
           <button>Next</button>
         </NextSlideAction>
-      </HorizontalSliderWrapper>
+      </HorizontalCarouselWrapper>
     </Block>
   )
 }

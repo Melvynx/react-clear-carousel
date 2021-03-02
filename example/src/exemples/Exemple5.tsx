@@ -2,8 +2,8 @@ import React from 'react'
 import { Block } from 'baseui/block'
 
 import {
-  HorizontalSlider,
-  HorizontalSliderWrapper,
+  HorizontalCarousel,
+  HorizontalCarouselWrapper,
   NextSlideAction,
   PrevSlideAction,
   SliderElementProps
@@ -60,20 +60,20 @@ const Exemple5 = () => {
         alignItems: 'center'
       })}
     >
-      <HorizontalSliderWrapper
+      <HorizontalCarouselWrapper
         datas={datas}
         currentSize={{ element: 200, margin: 10 }}
       >
         <PrevSlideAction>
           <button className={buttonClass}>-</button>
         </PrevSlideAction>
-        <HorizontalSlider rootClassname={css({ width: '200px' })}>
+        <HorizontalCarousel rootClassname={css({ width: '200px' })}>
           <Element />
-        </HorizontalSlider>
+        </HorizontalCarousel>
         <NextSlideAction>
           <button className={buttonClass}>+</button>
         </NextSlideAction>
-      </HorizontalSliderWrapper>
+      </HorizontalCarouselWrapper>
     </Block>
   )
 }
