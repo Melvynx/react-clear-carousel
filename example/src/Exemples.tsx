@@ -2,13 +2,12 @@ import React from 'react'
 import { Block } from 'baseui/block'
 import { Heading, HeadingLevel } from 'baseui/heading'
 import { StyledLink } from 'baseui/link'
-
 import Exemple1 from './exemples/Exemple1'
 import Exemple2 from './exemples/Exemple2'
 import Exemple3 from './exemples/Exemple3'
 import Exemple4 from './exemples/Exemple4'
-import ExempleWrapper from './exemples/ExempleWrapper'
 import Exemple5 from './exemples/Exemple5'
+import ExempleWrapper from './exemples/ExempleWrapper'
 import { useStyletron } from 'baseui'
 
 export default function Exemples() {
@@ -30,17 +29,25 @@ export default function Exemples() {
       width={['100%', '100%', '1000px', '1000px']}
     >
       <HeadingLevel>
-        <Heading>react-simple-slider</Heading>
-        <p className={paragraph}>
-          Simple slider made in React easily customizable.
-        </p>
-        <p className={paragraph}>
-          Here is an example to help you. The source code for these examples is
-          on github.
-        </p>
-        <StyledLink href='https://github.com'>
-          API and more info on Github
-        </StyledLink>
+        <Heading
+          overrides={{
+            Block: { style: () => ({ margin: 0 }) }
+          }}
+        >
+          react-simple-slider
+        </Heading>
+        <Block marginBottom={'16px'}>
+          <p className={paragraph}>
+            Simple slider made in React easily customizable.
+          </p>
+          <p className={paragraph}>
+            Here is an example to help you. The source code for these examples
+            is on github.
+          </p>
+          <StyledLink href='https://github.com'>
+            API and more info on Github
+          </StyledLink>
+        </Block>
         <ExempleWrapper
           title='Exemple 1'
           description='Slider with very little basic code. It is possible to see several cards. Try clicking on a map, it will be displayed first.'
