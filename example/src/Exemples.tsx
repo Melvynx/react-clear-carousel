@@ -3,7 +3,6 @@ import { Block } from 'baseui/block'
 import { Heading, HeadingLevel } from 'baseui/heading'
 import { StyledLink } from 'baseui/link'
 import InteractiveExemple from './exemples/InteractiveExemple'
-import CustomizeExemple from './exemples/CustomizeExemple'
 import ImageExemple from './exemples/ImageExemple'
 import ExempleWrapper from './exemples/ExempleWrapper'
 import { useStyletron } from 'baseui'
@@ -64,12 +63,6 @@ export default function Exemples() {
           <>
             <ImageExemple />
           </>
-        </ExempleWrapper>
-        <ExempleWrapper
-          title='Exemple 3'
-          description='It is easy to add styles to internal elements. Here you can see how the component works, hiding the cards that exceed.'
-        >
-          <CustomizeExemple />
         </ExempleWrapper>
       </HeadingLevel>
     </Block>
