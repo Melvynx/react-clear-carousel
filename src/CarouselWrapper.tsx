@@ -26,10 +26,13 @@ export function CarouselWrapper<T extends ElementId>({
     transition
   })
 
+  const value = React.useMemo(
+    () => ({ nextSlide, prevSlide, classes, setSlide, elementsDatas: datas }),
+    []
+  )
+
   return (
-    <HorizontalCarouselWrapperContext.Provider
-      value={{ nextSlide, prevSlide, classes, setSlide, elementsDatas: datas }}
-    >
+    <HorizontalCarouselWrapperContext.Provider value={value}>
       {children}
     </HorizontalCarouselWrapperContext.Provider>
   )

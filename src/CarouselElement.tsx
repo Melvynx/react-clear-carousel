@@ -22,10 +22,7 @@ export function CarouselElement({
 
   return (
     <div className={clsx(rootClassname, classes?.root)}>
-      <div
-        style={{ display: 'flex' }}
-        className={clsx(classes?.flexBox, elementBoxClassname)}
-      >
+      <div className={clsx(classes?.flexBox, elementBoxClassname)}>
         {elementsData.map((data, i) => (
           <div key={data.id} onClick={() => setSlide?.(i)}>
             {React.cloneElement(children, {
