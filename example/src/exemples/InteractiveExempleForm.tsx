@@ -5,16 +5,16 @@ import { FormControl } from 'baseui/form-control'
 import { Input } from 'baseui/input'
 import { Checkbox } from 'baseui/checkbox'
 
-export default function Exemple1Form({
-  reverseChecked,
-  setReverseChecked,
-  transition,
-  setTransition
+export default function InteractiveExempleForm({
+  props,
+  setProps
 }: {
-  reverseChecked: boolean
-  setReverseChecked: (checked: boolean) => void
-  transition: string
-  setTransition: (transition: string) => void
+  props: {
+    reverse: boolean
+    transition: string
+    one: boolean
+  }
+  setProps: Function
 }) {
   const [css, theme] = useStyletron()
 
@@ -37,8 +37,10 @@ export default function Exemple1Form({
         Interactive Slider Settings
       </h6>
       <Checkbox
-        checked={reverseChecked}
-        onChange={(e: any) => setReverseChecked(e.target.checked)}
+        checked={props.reverse}
+        onChange={(e: any) =>
+          setProps((prev: any) => ({ ...prev, reverse: e.target.checked }))
+        }
         labelPlacement='right'
         overrides={{
           Root: { style: () => ({ marginBottom: '16px' }) }
@@ -46,13 +48,26 @@ export default function Exemple1Form({
       >
         Enable reverse and change flexDirection
       </Checkbox>
+      <Checkbox
+        checked={props.one}
+        onChange={(e: any) =>
+          setProps((prev: any) => ({ ...prev, one: e.target.checked }))
+        }
+        labelPlacement='right'
+        overrides={{
+          Root: { style: () => ({ marginBottom: '16px' }) }
+        }}
+      >
+        Display only one card
+      </Checkbox>
       <FormControl
         label='transition'
         caption='the transition applied when the elements move'
       >
         <Input
-          value={transition}
-          onChange={(e: any) => setTransition(e.target.value)}
+          value={props.transition}
+          onChange={(e: any) => console.log(e)}
+          clearOnEscape
         />
       </FormControl>
     </Block>

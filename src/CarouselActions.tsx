@@ -1,5 +1,5 @@
 import React from 'react'
-import { useHorizontalSliderContext } from './HorizontalSliderWrapper'
+import { useCarouselContext } from './CarouselWrapper'
 import { callAll } from './utils'
 
 export function NextSlideAction({
@@ -7,7 +7,7 @@ export function NextSlideAction({
 }: {
   children: React.ReactElement
 }) {
-  const { nextSlide } = useHorizontalSliderContext()
+  const { nextSlide } = useCarouselContext()
   return React.cloneElement(children, {
     onClick: callAll(nextSlide, children.props.onClick)
   })
@@ -18,7 +18,7 @@ export function PrevSlideAction({
 }: {
   children: React.ReactElement
 }) {
-  const { prevSlide } = useHorizontalSliderContext()
+  const { prevSlide } = useCarouselContext()
   return React.cloneElement(children, {
     onClick: callAll(prevSlide, children.props.onClick)
   })

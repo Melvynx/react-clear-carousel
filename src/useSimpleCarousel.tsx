@@ -1,15 +1,15 @@
 import * as React from 'react'
-import { useSimpleSliderStyles } from './useSimpleSliderStyles'
+import { useSimpleCarouselStyles } from './useSimpleCarouselStyles'
 import { SimpleSliderConfig } from './types'
 
-export function useSimpleSlider({
+export function useSimpleCarousel({
   listLength,
   size,
   reverse,
   transition
 }: SimpleSliderConfig) {
   const [currentSlide, setCurrentSlide] = React.useState(0)
-  const classes = useSimpleSliderStyles({
+  const classes = useSimpleCarouselStyles({
     size,
     currentSlide,
     reverse,

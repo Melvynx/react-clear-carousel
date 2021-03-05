@@ -4,22 +4,22 @@ import {
   HorizontalSliderContextProps,
   HorizontalSliderWrapperProps
 } from './types'
-import { useSimpleSlider } from './useSimpleSlider'
+import { useSimpleCarousel } from './useSimpleCarousel'
 
-const HorizontalSliderContext = React.createContext<HorizontalSliderContextProps>(
+const HorizontalCarouselWrapperContext = React.createContext<HorizontalSliderContextProps>(
   {
     elementsDatas: []
   }
 )
 
-export function HorizontalSliderWrapper<T extends ElementId>({
+export function CarouselWrapper<T extends ElementId>({
   datas,
   currentSize,
   children,
   reverse,
   transition
 }: HorizontalSliderWrapperProps<T>) {
-  const { classes, setSlide, nextSlide, prevSlide } = useSimpleSlider({
+  const { classes, setSlide, nextSlide, prevSlide } = useSimpleCarousel({
     listLength: datas.length,
     size: currentSize,
     reverse,
@@ -27,16 +27,16 @@ export function HorizontalSliderWrapper<T extends ElementId>({
   })
 
   return (
-    <HorizontalSliderContext.Provider
+    <HorizontalCarouselWrapperContext.Provider
       value={{ nextSlide, prevSlide, classes, setSlide, elementsDatas: datas }}
     >
       {children}
-    </HorizontalSliderContext.Provider>
+    </HorizontalCarouselWrapperContext.Provider>
   )
 }
 
-export const useHorizontalSliderContext = () => {
-  const context = React.useContext(HorizontalSliderContext)
+export const useCarouselContext = () => {
+  const context = React.useContext(HorizontalCarouselWrapperContext)
 
   if (!context)
     throw new Error(

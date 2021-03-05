@@ -4,7 +4,7 @@ import { HorizontalSliderStylesProps } from './types'
 /*
  * Creation of a custom style hook to avoid using a third party library.
  */
-export function useSimpleSliderStyles({
+export function useSimpleCarouselStyles({
   size,
   currentSlide,
   reverse,
@@ -46,6 +46,7 @@ export function useSimpleSliderStyles({
   transition: ${transition ? transition : 'transform .3s ease-in-out'};
   transform: translate(${reverse ? '+' : '-'}${translatePixel}px);
   display: flex;
+  ${reverse ? 'flex-direction: row-reverse' : ''}
 }`
   }, [classes, currentSlide, size.element, size.margin, reverse, transition])
 

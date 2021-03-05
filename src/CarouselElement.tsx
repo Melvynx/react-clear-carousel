@@ -1,6 +1,6 @@
 import React from 'react'
 import clsx from 'clsx'
-import { useHorizontalSliderContext } from './HorizontalSliderWrapper'
+import { useCarouselContext } from './CarouselWrapper'
 import './styles.css'
 
 type HorizontalSliderProps = {
@@ -9,7 +9,7 @@ type HorizontalSliderProps = {
   elementBoxClassname?: string
 }
 
-export function HorizontalSlider({
+export function CarouselElement({
   children,
   rootClassname,
   elementBoxClassname
@@ -18,7 +18,7 @@ export function HorizontalSlider({
     elementsDatas: elementsData,
     classes,
     setSlide
-  } = useHorizontalSliderContext()
+  } = useCarouselContext()
 
   return (
     <div className={clsx(rootClassname, classes?.root)}>

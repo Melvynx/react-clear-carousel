@@ -1,10 +1,10 @@
 {
-  "name": "react-simple-slider",
+  "name": "react-simple-carousel",
   "version": "1.0.0",
-  "description": "Simple react slider easy to integrate",
+  "description": "Simple react carousel easy to integrate",
   "author": "Melvynx",
   "license": "MIT",
-  "repository": "Melvynx/react-simple-slider",
+  "repository": "Melvynx/react-simple-carousel",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",

@@ -2,10 +2,9 @@ import React from 'react'
 import { Block } from 'baseui/block'
 import { Heading, HeadingLevel } from 'baseui/heading'
 import { StyledLink } from 'baseui/link'
-import Exemple1 from './exemples/Exemple1'
-import Exemple3 from './exemples/Exemple3'
-import Exemple4 from './exemples/Exemple4'
-import Exemple5 from './exemples/Exemple5'
+import InteractiveExemple from './exemples/InteractiveExemple'
+import CustomizeExemple from './exemples/CustomizeExemple'
+import ImageExemple from './exemples/ImageExemple'
 import ExempleWrapper from './exemples/ExempleWrapper'
 import { useStyletron } from 'baseui'
 import { Paragraph2 } from 'baseui/typography'
@@ -53,25 +52,24 @@ export default function Exemples() {
           </Block>
         </Block>
         <ExempleWrapper
-          title='Exemple 1'
+          title='Interactive example'
           description='Slider with very little basic code. It is possible to see several cards. Try clicking on a card, it will be displayed first.'
         >
-          <Exemple1 />
+          <InteractiveExemple />
         </ExempleWrapper>
         <ExempleWrapper
           title='Exemple 2'
           description='Displays only one element. It is easy to display an image, with buttons and custom elements.'
         >
           <>
-            <Exemple3 />
-            <Exemple5 />
+            <ImageExemple />
           </>
         </ExempleWrapper>
         <ExempleWrapper
           title='Exemple 3'
           description='It is easy to add styles to internal elements. Here you can see how the component works, hiding the cards that exceed.'
         >
-          <Exemple4 />
+          <CustomizeExemple />
         </ExempleWrapper>
       </HeadingLevel>
     </Block>
