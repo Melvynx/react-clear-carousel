@@ -8,6 +8,7 @@ It is a simple slider that will be customizable and offers great posibilities.
 
 ```bash
 npm install --save react-simple-slider
+# or
 yarn add react-simple-slider
 ```
 
