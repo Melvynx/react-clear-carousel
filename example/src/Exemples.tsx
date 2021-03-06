@@ -27,7 +27,7 @@ export default function Exemples() {
             }
           }}
         >
-          react-simple-carousel
+          react-very-light-carousel
         </Heading>
         <Block
           marginBottom={'16px'}

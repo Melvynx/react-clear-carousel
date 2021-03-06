@@ -1,14 +1,17 @@
-# react-simple-slider
+# react-very-light-carousel
 
-> Simple react slider easy to integrate
+> Simple react slider easy to integrate.
+> Very light and uses only `clsx` as an dependency.
 
-It is a simple slider that will be customizable and offers great posibilities.
+It is a carousel that will be customizable and offers great posibilities.
+
+Go test the demo online [react-very-light-carousel demo](https://melvynx.github.io/react-very-light-carousel/)
 
 ## Install
 
 ```bash
-npm install --save react-simple-slider
-yarn add react-simple-slider
+npm install --save react-very-light-carousel
+yarn add react-very-light-carousel
 ```
 
 ## Usage
@@ -22,7 +25,7 @@ import {
   NextSlideAction,
   PrevSlideAction,
   SliderElementProps
-} from 'react-simple-slider'
+} from 'react-very-light-carousel'
 
 const datas = [
   { id: 0, text: 'slider 1' },
