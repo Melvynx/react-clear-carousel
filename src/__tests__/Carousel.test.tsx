@@ -26,6 +26,7 @@ export const datas: DatasTypes[] = [
 
 const classes = { root: 'rootClassname', element: 'elementBoxClassname' }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function Carousel({ ...props }: any) {
   return (
     <div>
