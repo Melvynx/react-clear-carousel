@@ -17,7 +17,7 @@
     "prepare": "run-s build",
     "test": "run-s test:unit test:lint test:build",
     "test:build": "run-s build",
-    "test:lint": "eslint .",
+    "test:lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
     "start:example": "cd example && yarn start",
     "test:watch": "react-scripts test --env=jsdom",
@@ -40,15 +40,8 @@
     "@typescript-eslint/parser": "^4.16.1",
     "cross-env": "^7.0.2",
     "eslint": "^6.8.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-airbnb-typescript": "^12.3.1",
     "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jest": "^24.1.5",
-    "eslint-plugin-json": "^2.1.2",
-    "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.22.0",
     "gh-pages": "^2.2.0",
     "microbundle-crl": "^0.13.10",
@@ -58,7 +51,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "^3.4.1",
-    "typescript": "^3.7.5"
+    "typescript": "^4.2.3"
   },
   "files": [
     "dist"
