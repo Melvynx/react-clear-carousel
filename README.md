@@ -13,6 +13,7 @@ Go test the demo online [react-very-light-carousel demo](https://melvynx.github.
 
 ```bash
 npm install --save react-very-light-carousel
+# of
 yarn add react-very-light-carousel
 ```
 
