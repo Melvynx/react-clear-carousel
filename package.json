@@ -25,7 +25,8 @@
     "deploy": "gh-pages -d example/build"
   },
   "peerDependencies": {
-    "react": "^16.0.0"
+    "react": ">=16.6.0",
+    "react-dom": ">=16.6.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.13.8",
