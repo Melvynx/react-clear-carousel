@@ -24,7 +24,7 @@
     "react": "link:../node_modules/react",
     "react-dom": "link:../node_modules/react-dom",
     "react-scripts": "link:../node_modules/react-scripts",
-    "react-simple-slider": "link:..",
+    "react-very-light-carousel": "link:..",
     "react-syntax-highlighter": "^15.4.3",
     "styletron-engine-atomic": "^1.4.7",
     "styletron-react": "^6.0.0",

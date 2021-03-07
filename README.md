@@ -1,15 +1,20 @@
-# react-simple-slider
+# react-very-light-carousel
 
-> Simple react slider easy to integrate
+[![npm minified size](https://img.shields.io/bundlephobia/min/react-very-light-carousel?style=flat-square)](https://www.npmjs.com/package/react-very-light-carousel)
+[![package version](https://img.shields.io/npm/v/react-very-light-carousel?style=flat-square)](https://www.npmjs.com/package/react-very-light-carousel)
+[![license](https://img.shields.io/npm/l/react-very-light-carousel?style=flat-square)](https://www.npmjs.com/package/react-very-light-carousel)
 
-It is a simple slider that will be customizable and offers great posibilities.
+Simple react carousel easy to integrate, he is very light and use 0 dependency.
+It is a carousel that will be customizable and offers great posibilities.
+
+Go test the demo online [react-very-light-carousel demo](https://melvynx.github.io/react-very-light-carousel/).
 
 ## Install
 
 ```bash
-npm install --save react-simple-slider
-# or
-yarn add react-simple-slider
+npm install --save react-very-light-carousel
+# of
+yarn add react-very-light-carousel
 ```
 
 ## Usage
@@ -23,7 +28,7 @@ import {
   NextSlideAction,
   PrevSlideAction,
   SliderElementProps
-} from 'react-simple-slider'
+} from 'react-very-light-carousel'
 
 const datas = [
   { id: 0, text: 'slider 1' },
@@ -71,39 +76,65 @@ const Element = ({
 #### useSimpleSlider
 
 ```ts
-import { useSimpleSlider } from 'react-simple-slider'
-```
+import { useSimpleSlider } from 'react-very-light-carousel'
 
-- SimpleSliderConfig: {
-  listLength: `number` Size of all elements
+export type SimpleSliderConfig = {
+  listLength: number // length of your datas
   size: {
-  element: `number` Width of one element
-  margin: `number` Margin of one element
+    element: number // size of one element
+    margin: number // margin of one element
   }
+  reverse?: boolean // true and the carousel go left to right
+  transition?: string // transition when carousel slide change
+}
+
+function useSimpleCarousel(
+  config: SimpleSliderConfig
+): {
+  nextSlide: () => void // handle the next slide
+  prevSlide: () => void // handle the prev slide,
+  setSlide: () => void // set slide to specific id,
+  classes: {
+    // different class for elements
+    card: string
+    flexBox: string
+    root: string
   }
-
-#### HorizontalSliderWrapper
-
-```ts
-import { HorizontalSliderWrapper } from 'react-simple-slider'
+}
 ```
 
-- datas: Array of datas for your elements. Must have an `id`.
-- currentSize: `number` {
-  element: `number` Width of one element
-  margin: `number` Margin of one element
-  }
-- children: `React.ReactElement` Any children.
-
-#### HorizontalSlider
+#### CarouselWrapper
 
 ```ts
-import { HorizontalSlider } from 'react-simple-slider'
+import { CarouselWrapper } from 'react-very-light-carousel'
+
+export type CarouselWrapperProps<T extends ElementId> = {
+  datas: T[] // data given for different slide
+  currentSize: {
+    element: number // size of one element
+    margin: number // margin of one element
+  }
+  children: React.ReactElement | React.ReactElement[]
+  reverse?: boolean // true and the carousel go left to right
+  transition?: string // transition when carousel slide change
+}
+
+function CarouselWrapper<T extends ElementId>(props: CarouselWrapperProps<T>)
 ```
 
-- children: `React.ReactElement` Element need to take 2 props : `className`: `string` and `data`: Your data type.
-- rootClassname: `string` Classes for the root element
-- elementBoxClassname?: `string` Classes for flex div who flex the elements
+#### CarouselElement
+
+```ts
+import { CarouselElement } from 'react-very-light-carousel'
+
+type HorizontalSliderProps = {
+  children: React.ReactElement // element for each slide
+  rootClassname?: string // classname for the root
+  elementBoxClassname?: string // classname for elements flex box
+}
+
+function CarouselElement(props: HorizontalSliderProps)
+```
 
 #### NextSlideAction
 
@@ -113,16 +144,16 @@ import { NextSlideAction, PrevSlideAction } from 'react-simple-slider'
 const Buttons = () => (
   <div>
     <PrevSlideAction>
-      <button>Prev</button>
+      <button>Prev slide</button>
     </PrevSlideAction>
     <NextSlideAction>
-      <button>Next</button>
+      <button>Next slide</button>
     </NextSlideAction>
   </div>
 )
 ```
 
-- children: `React.ReactElement` `onClick` props will be injected into your children.
+The children will have a `onClick` props to handle next / prev slide.
 
 ## License
 

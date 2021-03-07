@@ -7,7 +7,7 @@ import {
   NextSlideAction,
   PrevSlideAction,
   SliderElementProps
-} from 'react-simple-slider'
+} from 'react-very-light-carousel'
 import { useStyletron } from 'baseui'
 import { Button } from 'baseui/button'
 
