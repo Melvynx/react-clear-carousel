@@ -1,16 +1,10 @@
 import React from 'react'
-import {
-  ElementId,
-  HorizontalSliderContextProps,
-  HorizontalSliderWrapperProps
-} from './types'
+import { ElementId, CarouselContextProps, CarouselWrapperProps } from './types'
 import { useSimpleCarousel } from './useSimpleCarousel'
 
-const HorizontalCarouselWrapperContext = React.createContext<HorizontalSliderContextProps>(
-  {
-    elementsDatas: []
-  }
-)
+const CarouselWrapperContext = React.createContext<CarouselContextProps>({
+  elementsDatas: []
+})
 
 export function CarouselWrapper<T extends ElementId>({
   datas,
@@ -18,7 +12,7 @@ export function CarouselWrapper<T extends ElementId>({
   children,
   reverse,
   transition
-}: HorizontalSliderWrapperProps<T>) {
+}: CarouselWrapperProps<T>) {
   const { classes, setSlide, nextSlide, prevSlide } = useSimpleCarousel({
     listLength: datas.length,
     size: currentSize,
@@ -32,14 +26,14 @@ export function CarouselWrapper<T extends ElementId>({
   )
 
   return (
-    <HorizontalCarouselWrapperContext.Provider value={value}>
+    <CarouselWrapperContext.Provider value={value}>
       {children}
-    </HorizontalCarouselWrapperContext.Provider>
+    </CarouselWrapperContext.Provider>
   )
 }
 
 export const useCarouselContext = () => {
-  const context = React.useContext(HorizontalCarouselWrapperContext)
+  const context = React.useContext(CarouselWrapperContext)
 
   if (!context)
     throw new Error(

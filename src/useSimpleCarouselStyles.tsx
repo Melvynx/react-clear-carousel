@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { HorizontalSliderStylesProps } from './types'
+import { CarouselStylesProps } from './types'
 
 /*
  * Creation of a custom style hook to avoid using a third party library.
@@ -9,7 +9,7 @@ export function useSimpleCarouselStyles({
   currentSlide,
   reverse,
   transition
-}: HorizontalSliderStylesProps) {
+}: CarouselStylesProps) {
   const uniqueId = React.useRef(
     'slider' + Math.random().toString(36).substr(2, 9)
   )

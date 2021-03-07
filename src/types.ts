@@ -1,18 +1,18 @@
-export type HorizontalSliderStylesProps = {
-  size: SliderElementSize
+export type CarouselStylesProps = {
+  size: ElementSize
   currentSlide: number
   reverse?: boolean
   transition?: string
 }
 
-export type SliderElementSize = {
+export type ElementSize = {
   element: number
   margin: number
 }
 
 export type SimpleSliderConfig = {
   listLength: number
-  size: SliderElementSize
+  size: ElementSize
   reverse?: boolean
   transition?: string
 }
@@ -21,7 +21,7 @@ export interface ElementId {
   id: number
 }
 
-export type HorizontalSliderContextProps = {
+export type CarouselContextProps = {
   nextSlide?: () => void
   prevSlide?: () => void
   setSlide?: (slideIndex: number) => void
@@ -29,9 +29,9 @@ export type HorizontalSliderContextProps = {
   classes?: { card: string; flexBox: string; root: string }
 }
 
-export type HorizontalSliderWrapperProps<T> = {
+export type CarouselWrapperProps<T extends ElementId> = {
   datas: T[]
-  currentSize: SliderElementSize
+  currentSize: ElementSize
   reverse?: boolean
   children: React.ReactElement | React.ReactElement[]
   transition?: string
