@@ -1,10 +1,11 @@
 {
   "name": "react-very-light-carousel",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple react carousel easy to integrate",
   "author": "Melvynx",
   "license": "MIT",
   "repository": "Melvynx/react-very-light-carousel",
+  "homepage": "https://melvynx.github.io/react-very-light-carousel/",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
