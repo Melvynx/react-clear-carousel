@@ -24,16 +24,14 @@ export default function InteractiveExempleForm({
         border: `1px solid ${theme.colors.backgroundTertiary}`,
         marginRight: '16px'
       })}
-      padding='8px'
-    >
+      padding='8px'>
       <h6
         className={css({
           fontSize: '20px',
           margin: '0 0 16px 0',
           lineHeight: 1,
           color: 'white'
-        })}
-      >
+        })}>
         Interactive Slider Settings
       </h6>
       <Checkbox
@@ -44,8 +42,7 @@ export default function InteractiveExempleForm({
         labelPlacement='right'
         overrides={{
           Root: { style: () => ({ marginBottom: '16px' }) }
-        }}
-      >
+        }}>
         Enable reverse and change flexDirection
       </Checkbox>
       <Checkbox
@@ -56,14 +53,12 @@ export default function InteractiveExempleForm({
         labelPlacement='right'
         overrides={{
           Root: { style: () => ({ marginBottom: '16px' }) }
-        }}
-      >
+        }}>
         Display only one card
       </Checkbox>
       <FormControl
         label='transition'
-        caption='the transition applied when the elements move'
-      >
+        caption='the transition applied when the elements move'>
         <Input
           value={props.transition}
           onChange={(e: any) => console.log(e)}

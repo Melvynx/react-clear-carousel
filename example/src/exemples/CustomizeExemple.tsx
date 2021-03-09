@@ -32,8 +32,7 @@ const CustomizeExemple = () => {
           elementBoxClassname={css({
             margin: '16px',
             border: '2px solid blue'
-          })}
-        >
+          })}>
           <Element />
         </CarouselElement>
         <PrevSlideAction>

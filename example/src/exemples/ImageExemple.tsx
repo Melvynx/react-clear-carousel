@@ -1,6 +1,5 @@
 import React from 'react'
 import { Block } from 'baseui/block'
-
 import {
   CarouselElement,
   CarouselWrapper,
@@ -10,40 +9,18 @@ import {
 } from 'react-very-light-carousel'
 import { useStyletron } from 'baseui'
 import { Button } from 'baseui/button'
-
-const datas = [
-  {
-    id: 0,
-    src: 'https://lenews.ch/wp-content/uploads/2016/05/Dogs-at-Nestle.jpg'
-  },
-  {
-    id: 1,
-    src:
-      'https://www.sbb.ch/content/dam/internet/keyvisual/GA-Hund.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg'
-  },
-  {
-    id: 2,
-    src:
-      'https://fun-dog-garderie.ch/wp-content/uploads/2019/06/Fun-Dog-Garderie-Piscine.jpg'
-  },
-  {
-    id: 3,
-    src:
-      'https://www.sbb.ch/content/dam/internet/keyvisual/Hund.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg'
-  },
-  {
-    id: 4,
-    src:
-      'https://static.secureholiday.net/static/CMS/photos/000/044/000044323.jpg'
-  }
-]
+import { imageDatas } from './datas'
+import { ArrowRight, ArrowLeft } from 'baseui/icon'
 
 const ImageExemple = () => {
   const [css, theme] = useStyletron()
 
   return (
     <Block margin='8px' display='flex' alignItems='center'>
-      <CarouselWrapper datas={datas} currentSize={{ element: 400, margin: 16 }}>
+      <CarouselWrapper
+        datas={imageDatas}
+        currentSize={{ element: 400, margin: 16 }}
+      >
         <PrevSlideAction>
           <Button
             overrides={{
@@ -53,7 +30,7 @@ const ImageExemple = () => {
             }}
             kind='secondary'
             shape='circle'
-            children='-'
+            children={<ArrowLeft size={32} />}
           />
         </PrevSlideAction>
         <CarouselElement
@@ -72,7 +49,7 @@ const ImageExemple = () => {
             }}
             kind='secondary'
             shape='circle'
-            children='+'
+            children={<ArrowRight size={32} />}
           />
         </NextSlideAction>
       </CarouselWrapper>

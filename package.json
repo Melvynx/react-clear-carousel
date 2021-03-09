@@ -1,6 +1,6 @@
 {
   "name": "react-very-light-carousel",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Simple react carousel easy to integrate",
   "author": "Melvynx",
   "license": "MIT",
@@ -56,8 +56,5 @@
   },
   "files": [
     "dist"
-  ],
-  "dependencies": {
-    "clsx": "^1.1.1"
-  }
+  ]
 }
