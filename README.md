@@ -3,6 +3,7 @@
 [![npm minified size](https://img.shields.io/bundlephobia/min/react-very-light-carousel?style=flat-square)](https://www.npmjs.com/package/react-very-light-carousel)
 [![package version](https://img.shields.io/npm/v/react-very-light-carousel?style=flat-square)](https://www.npmjs.com/package/react-very-light-carousel)
 [![license](https://img.shields.io/npm/l/react-very-light-carousel?style=flat-square)](https://www.npmjs.com/package/react-very-light-carousel)
+[![license](https://shields-staging.herokuapp.com/badge/types-TypeScript-%232f74c0?style=flat-square&logo=appveyor)](https://www.npmjs.com/package/react-very-light-carousel)
 
 Simple react carousel easy to integrate, he is very light and use 0 dependency.
 It is a carousel that will be customizable and offers great posibilities.
@@ -41,8 +42,7 @@ const Slider = () => {
     <div style={{ width: 200 }}>
       <HorizontalSliderWrapper
         datas={datas}
-        currentSize={{ element: 116, margin: 10 }}
-      >
+        currentSize={{ element: 116, margin: 10 }}>
         <HorizontalSlider>
           <Element />
         </HorizontalSlider>
