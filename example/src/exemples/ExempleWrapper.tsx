@@ -24,15 +24,14 @@ export default function ExempleWrapper({
       })}
       padding={['8px', '8px', '16px', '16px']}
       display='flex'
-      flexDirection='column'
-    >
-      <Heading styleLevel={3}
+      flexDirection='column'>
+      <Heading
+        styleLevel={3}
         className={css({
           margin: '0',
           fontSize: '32px',
           color: theme.colors.white
-        })}
-      >
+        })}>
         {title}
       </Heading>
       <Paragraph1>{description}</Paragraph1>

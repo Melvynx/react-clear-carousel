@@ -33,8 +33,7 @@ function Carousel({ ...props }: any) {
       <CarouselWrapper datas={datas} {...props}>
         <CarouselElement
           rootClassname={classes.root}
-          elementBoxClassname={classes.element}
-        >
+          elementBoxClassname={classes.element}>
           <Element />
         </CarouselElement>
         <PrevSlideAction>

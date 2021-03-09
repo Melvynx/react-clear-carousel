@@ -15,3 +15,30 @@ export const datas: DatasTypes[] = [
   { id: 11, text: 'Hound', color: '#c0392b' },
   { id: 12, text: 'Lurcher', color: '#d35400' }
 ]
+
+export const imageDatas = [
+  {
+    id: 0,
+    src: 'https://lenews.ch/wp-content/uploads/2016/05/Dogs-at-Nestle.jpg'
+  },
+  {
+    id: 1,
+    src:
+      'https://www.sbb.ch/content/dam/internet/keyvisual/GA-Hund.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg'
+  },
+  {
+    id: 2,
+    src:
+      'https://fun-dog-garderie.ch/wp-content/uploads/2019/06/Fun-Dog-Garderie-Piscine.jpg'
+  },
+  {
+    id: 3,
+    src:
+      'https://www.sbb.ch/content/dam/internet/keyvisual/Hund.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg'
+  },
+  {
+    id: 4,
+    src:
+      'https://static.secureholiday.net/static/CMS/photos/000/044/000044323.jpg'
+  }
+]

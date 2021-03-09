@@ -12,6 +12,7 @@ import InteractiveExempleForm from './InteractiveExempleForm'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import getInteractiveExempleCode from './getInteractiveExempleCode'
+import { useStyletron } from 'baseui'
 
 const InteractiveExemple = () => {
   const [props, setProps] = React.useState({
@@ -19,19 +20,23 @@ const InteractiveExemple = () => {
     transition: 'transform .3s ease-in-out',
     one: false
   })
+  const [css, theme] = useStyletron()
 
   return (
     <Block>
       <Block width='100%' display='flex' justifyContent='center'>
         <InteractiveExempleForm props={props} setProps={setProps} />
-        <Block minWidth={['200px', '400px', '400px']}>
+        <Block
+          className={css({
+            border: `1px solid ${theme.colors.backgroundTertiary}`
+          })}
+          minWidth={['200px', '400px', '400px']}>
           <Block width={props.one ? '116px' : ['200px', '400px', '400px']}>
             <CarouselWrapper
               transition={props.transition}
               reverse={props.reverse}
               datas={datas}
-              currentSize={{ element: 116, margin: 10 }}
-            >
+              currentSize={{ element: 116, margin: 10 }}>
               <CarouselElement>
                 <Element />
               </CarouselElement>

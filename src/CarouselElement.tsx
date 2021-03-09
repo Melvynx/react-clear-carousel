@@ -1,7 +1,7 @@
 import React from 'react'
-import clsx from 'clsx'
 import { useCarouselContext } from './CarouselWrapper'
 import './styles.css'
+import { clsx } from './utils'
 
 type HorizontalSliderProps = {
   children: React.ReactElement
