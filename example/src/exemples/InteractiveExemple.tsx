@@ -6,7 +6,7 @@ import {
   NextSlideAction,
   PrevSlideAction,
   SliderElementProps
-} from 'react-very-light-carousel'
+} from 'react-clear-carousel'
 import { datas, DatasTypes } from './datas'
 import InteractiveExempleForm from './InteractiveExempleForm'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'

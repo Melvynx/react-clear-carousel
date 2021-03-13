@@ -1,11 +1,11 @@
 {
-  "name": "react-very-light-carousel",
-  "version": "1.0.4",
+  "name": "react-clear-carousel",
+  "version": "1.0.5",
   "description": "Simple react carousel easy to integrate",
   "author": "Melvynx",
   "license": "MIT",
-  "repository": "Melvynx/react-very-light-carousel",
-  "homepage": "https://melvynx.github.io/react-very-light-carousel/",
+  "repository": "Melvynx/react-clear-carousel",
+  "homepage": "https://melvynx.github.io/react-clear-carousel/",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
@@ -57,5 +57,14 @@
   },
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "react",
+    "carousel",
+    "clear",
+    "simple",
+    "performent",
+    "easy",
+    "typescript"
   ]
 }

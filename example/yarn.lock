@@ -8990,6 +8990,10 @@ react-app-polyfill@^1.0.6:
     regenerator-runtime "^0.13.3"
     whatwg-fetch "^3.0.0"
 
+"react-clear-carousel@link:..":
+  version "0.0.0"
+  uid ""
+
 react-clientside-effect@^1.2.2:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/react-clientside-effect/-/react-clientside-effect-1.2.5.tgz#e2c4dc3c9ee109f642fac4f5b6e9bf5bcd2219a3"
@@ -9119,10 +9123,6 @@ react-uid@^2.3.0:
   integrity sha512-6C5pwNYP1udgp5feQ9MTBZBKD4su9nhD2aYCFY1bB0Bpask8wYKYz0ZhAtAJ4lcmTDC5kY1ByGTQMFDHQW6p0w==
   dependencies:
     tslib "^1.10.0"
-
-"react-very-light-carousel@link:..":
-  version "0.0.0"
-  uid ""
 
 react-virtualized-auto-sizer@^1.0.2:
   version "1.0.4"

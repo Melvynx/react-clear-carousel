@@ -6,7 +6,7 @@ import {
   NextSlideAction,
   PrevSlideAction,
   SliderElementProps
-} from 'react-very-light-carousel'
+} from 'react-clear-carousel'
 import { useStyletron } from 'baseui'
 import { Button } from 'baseui/button'
 import { imageDatas } from './datas'
@@ -19,8 +19,7 @@ const ImageExemple = () => {
     <Block margin='8px' display='flex' alignItems='center'>
       <CarouselWrapper
         datas={imageDatas}
-        currentSize={{ element: 400, margin: 16 }}
-      >
+        currentSize={{ element: 400, margin: 16 }}>
         <PrevSlideAction>
           <Button
             overrides={{
@@ -38,8 +37,7 @@ const ImageExemple = () => {
             width: '400px',
             border: `2px solid ${theme.colors.buttonSecondaryFill}`,
             borderRadius: '4px'
-          })}
-        >
+          })}>
           <Element />
         </CarouselElement>
         <NextSlideAction>
@@ -75,8 +73,7 @@ const Element = ({
           height: '250px',
 
           background: `url(${data?.src})`
-        })}
-      ></div>
+        })}></div>
     </div>
   )
 }

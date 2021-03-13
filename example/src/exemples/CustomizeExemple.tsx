@@ -7,7 +7,7 @@ import {
   NextSlideAction,
   PrevSlideAction,
   SliderElementProps
-} from 'react-very-light-carousel'
+} from 'react-clear-carousel'
 import { useStyletron } from 'baseui'
 import { DatasTypes } from './datas'
 

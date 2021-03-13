@@ -1,21 +1,21 @@
-# react-very-light-carousel
+# react-clear-carousel
 
-[![npm minified size](https://img.shields.io/bundlephobia/min/react-very-light-carousel?style=flat-square)](https://www.npmjs.com/package/react-very-light-carousel)
-[![package version](https://img.shields.io/npm/v/react-very-light-carousel?style=flat-square)](https://www.npmjs.com/package/react-very-light-carousel)
-[![license](https://img.shields.io/npm/l/react-very-light-carousel?style=flat-square)](https://www.npmjs.com/package/react-very-light-carousel)
-[![license](https://shields-staging.herokuapp.com/badge/types-TypeScript-%232f74c0?style=flat-square&logo=appveyor)](https://www.npmjs.com/package/react-very-light-carousel)
+[![npm minified size](https://img.shields.io/bundlephobia/min/react-clear-carousel?style=flat-square)](https://www.npmjs.com/package/react-clear-carousel)
+[![package version](https://img.shields.io/npm/v/react-clear-carousel?style=flat-square)](https://www.npmjs.com/package/react-clear-carousel)
+[![license](https://img.shields.io/npm/l/react-clear-carousel?style=flat-square)](https://www.npmjs.com/package/react-clear-carousel)
+[![license](https://shields-staging.herokuapp.com/badge/types-TypeScript-%232f74c0?style=flat-square&logo=appveyor)](https://www.npmjs.com/package/react-clear-carousel)
 
 Simple react carousel easy to integrate, he is very light and use 0 dependency.
 It is a carousel that will be customizable and offers great posibilities.
 
-Go test the demo online [react-very-light-carousel demo](https://melvynx.github.io/react-very-light-carousel/).
+Go test the demo online [react-clear-carousel demo](https://melvynx.github.io/react-clear-carousel/).
 
 ## Install
 
 ```bash
-npm install --save react-very-light-carousel
+npm install --save react-clear-carousel
 # of
-yarn add react-very-light-carousel
+yarn add react-clear-carousel
 ```
 
 ## Usage
@@ -24,12 +24,12 @@ yarn add react-very-light-carousel
 import React from 'react'
 
 import {
-  HorizontalSlider,
-  HorizontalSliderWrapper,
+  CarouselElement,
+  CarouselWrapper,
   NextSlideAction,
   PrevSlideAction,
   SliderElementProps
-} from 'react-very-light-carousel'
+} from 'react-clear-carousel'
 
 const datas = [
   { id: 0, text: 'slider 1' },
@@ -37,22 +37,23 @@ const datas = [
   { id: 2, text: 'slider 3' }
 ]
 
-const Slider = () => {
+const Carousel = () => {
   return (
-    <div style={{ width: 200 }}>
-      <HorizontalSliderWrapper
+    <div style={{ width: 400 }}>
+      <CarouselWrapper
+        reverse={false}
         datas={datas}
         currentSize={{ element: 116, margin: 10 }}>
-        <HorizontalSlider>
+        <CarouselElement>
           <Element />
-        </HorizontalSlider>
+        </CarouselElement>
         <PrevSlideAction>
           <button>Prev</button>
         </PrevSlideAction>
         <NextSlideAction>
           <button>Next</button>
         </NextSlideAction>
-      </HorizontalSliderWrapper>
+      </CarouselWrapper>
     </div>
   )
 }
@@ -76,7 +77,7 @@ const Element = ({
 #### useSimpleSlider
 
 ```ts
-import { useSimpleSlider } from 'react-very-light-carousel'
+import { useSimpleSlider } from 'react-clear-carousel'
 
 export type SimpleSliderConfig = {
   listLength: number // length of your datas
@@ -106,7 +107,7 @@ function useSimpleCarousel(
 #### CarouselWrapper
 
 ```ts
-import { CarouselWrapper } from 'react-very-light-carousel'
+import { CarouselWrapper } from 'react-clear-carousel'
 
 export type CarouselWrapperProps<T extends ElementId> = {
   datas: T[] // data given for different slide
@@ -125,7 +126,7 @@ function CarouselWrapper<T extends ElementId>(props: CarouselWrapperProps<T>)
 #### CarouselElement
 
 ```ts
-import { CarouselElement } from 'react-very-light-carousel'
+import { CarouselElement } from 'react-clear-carousel'
 
 type HorizontalSliderProps = {
   children: React.ReactElement // element for each slide
