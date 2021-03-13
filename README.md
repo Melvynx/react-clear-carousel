@@ -3,7 +3,7 @@
 [![npm minified size](https://img.shields.io/bundlephobia/min/react-clear-carousel?style=flat-square)](https://www.npmjs.com/package/react-clear-carousel)
 [![package version](https://img.shields.io/npm/v/react-clear-carousel?style=flat-square)](https://www.npmjs.com/package/react-clear-carousel)
 [![license](https://img.shields.io/npm/l/react-clear-carousel?style=flat-square)](https://www.npmjs.com/package/react-clear-carousel)
-[![license](https://shields-staging.herokuapp.com/badge/types-TypeScript-%232f74c0?style=flat-square&logo=appveyor)](https://www.npmjs.com/package/react-clear-carousel)
+[![typescript](https://shields-staging.herokuapp.com/badge/types-TypeScript-%232f74c0?style=flat-square&logo=appveyor)](https://www.npmjs.com/package/react-clear-carousel)
 
 Simple react carousel easy to integrate, he is very light and use 0 dependency.
 It is a carousel that will be customizable and offers great posibilities.
@@ -65,7 +65,7 @@ const Element = ({
   return (
     <div className={className}>
       <div style={{ padding: '8px', color: 'red', border: '1px solid blue' }}>
-        <p>id: {data?.text}</p>
+        <p>{data?.text}</p>
       </div>
     </div>
   )
