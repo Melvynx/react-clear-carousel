@@ -1,19 +1,37 @@
 import React from 'react'
-import { ElementId, CarouselContextProps, CarouselWrapperProps } from './types'
+import {
+  ElementId,
+  CarouselContextProps,
+  CarouselWrapperProps,
+  CarouselCurrentSlideContextProps
+} from './types'
 import { useSimpleCarousel } from './useSimpleCarousel'
 
 const CarouselWrapperContext = React.createContext<CarouselContextProps>({
   elementsDatas: []
 })
 
+type CarouselCurrentSlideContextPropsNull = CarouselCurrentSlideContextProps | null
+
+const CarouselCurrentSlideContext = React.createContext<CarouselCurrentSlideContextPropsNull>(
+  null
+)
+
 export function CarouselWrapper<T extends ElementId>({
   datas,
   currentSize,
   children,
   reverse,
-  transition
+  transition,
+  enableCurrentSlideHook
 }: CarouselWrapperProps<T>) {
-  const { classes, setSlide, nextSlide, prevSlide } = useSimpleCarousel({
+  const {
+    classes,
+    setSlide,
+    nextSlide,
+    prevSlide,
+    currentSlide
+  } = useSimpleCarousel({
     listLength: datas.length,
     size: currentSize,
     reverse,
@@ -27,7 +45,13 @@ export function CarouselWrapper<T extends ElementId>({
 
   return (
     <CarouselWrapperContext.Provider value={value}>
-      {children}
+      {enableCurrentSlideHook ? (
+        <CarouselCurrentSlideContext.Provider value={{ currentSlide }}>
+          {children}
+        </CarouselCurrentSlideContext.Provider>
+      ) : (
+        children
+      )}
     </CarouselWrapperContext.Provider>
   )
 }
@@ -37,7 +61,17 @@ export const useCarouselContext = () => {
 
   if (!context)
     throw new Error(
-      'Context must be used with HorizontalSliderContext.Provider'
+      'useCarouselContext must be used within CarouselWrapperContext.Provider'
+    )
+  return context
+}
+
+export const useCarouselCurrentSlide = () => {
+  const context = React.useContext(CarouselCurrentSlideContext)
+
+  if (!context)
+    throw new Error(
+      'You need to set `enableCurrentSlideHook` to true on `CarouselWrapper` to use this hook.'
     )
   return context
 }

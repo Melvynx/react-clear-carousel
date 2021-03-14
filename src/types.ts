@@ -29,12 +29,17 @@ export type CarouselContextProps = {
   classes?: { card: string; flexBox: string; root: string }
 }
 
+export type CarouselCurrentSlideContextProps = {
+  currentSlide: number
+}
+
 export type CarouselWrapperProps<T extends ElementId> = {
   datas: T[]
   currentSize: ElementSize
   reverse?: boolean
   children: React.ReactElement | React.ReactElement[]
   transition?: string
+  enableCurrentSlideHook?: boolean
 }
 
 export type SliderElementProps<T extends ElementId> = {

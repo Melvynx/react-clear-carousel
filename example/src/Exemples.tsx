@@ -54,7 +54,7 @@ export default function Exemples() {
         </ExempleWrapper>
         <ExempleWrapper
           title='Exemple 2'
-          description='Carousel only one element. It is easy to display an image, with buttons and custom elements.'>
+          description='It is easy to customize the carousel and add images. You can access the index of the current slide to create a pagination.'>
           <>
             <ImageExemple />
           </>
