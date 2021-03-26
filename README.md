@@ -5,7 +5,7 @@
 [![license](https://img.shields.io/npm/l/react-clear-carousel?style=flat-square)](https://www.npmjs.com/package/react-clear-carousel)
 [![typescript](https://shields-staging.herokuapp.com/badge/types-TypeScript-%232f74c0?style=flat-square&logo=appveyor)](https://www.npmjs.com/package/react-clear-carousel)
 
-Simple react carousel easy to integrate, he is very light and use 0 dependency.
+Clear react carousel easy to integrate, he is very light and use 0 dependency.
 It is a carousel that will be customizable and offers great posibilities.
 
 Go test the demo online [react-clear-carousel demo](https://melvynx.github.io/react-clear-carousel/).

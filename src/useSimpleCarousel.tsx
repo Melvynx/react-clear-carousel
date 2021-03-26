@@ -25,5 +25,5 @@ export function useSimpleCarousel({
   const setSlide = (slide: number) =>
     slide >= 0 && slide <= listLength && setCurrentSlide(slide)
 
-  return { nextSlide, prevSlide, setSlide, classes }
+  return { nextSlide, prevSlide, setSlide, classes, currentSlide }
 }

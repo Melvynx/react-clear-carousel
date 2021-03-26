@@ -24,7 +24,8 @@ export default function InteractiveExempleForm({
         border: `1px solid ${theme.colors.backgroundTertiary}`,
         marginRight: '16px'
       })}
-      padding='8px'>
+      padding='8px'
+      width='100%'>
       <h6
         className={css({
           fontSize: '20px',
@@ -32,7 +33,7 @@ export default function InteractiveExempleForm({
           lineHeight: 1,
           color: 'white'
         })}>
-        Interactive Slider Settings
+        Interactive Carousel Settings
       </h6>
       <Checkbox
         checked={props.reverse}
@@ -43,7 +44,7 @@ export default function InteractiveExempleForm({
         overrides={{
           Root: { style: () => ({ marginBottom: '16px' }) }
         }}>
-        Enable reverse and change flexDirection
+        Enable reverse
       </Checkbox>
       <Checkbox
         checked={props.one}
@@ -58,10 +59,14 @@ export default function InteractiveExempleForm({
       </Checkbox>
       <FormControl
         label='transition'
-        caption='the transition applied when the elements move'>
+        caption='Transition applied to slide change'>
         <Input
           value={props.transition}
-          onChange={(e: any) => console.log(e)}
+          onChange={(e: any) => {
+            const value = e.target?.value
+            if (!value) return
+            setProps((prev: any) => ({ ...prev, transition: value }))
+          }}
           clearOnEscape
         />
       </FormControl>
