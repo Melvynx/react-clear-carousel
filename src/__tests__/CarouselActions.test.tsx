@@ -16,15 +16,6 @@ describe('CarouselActions', () => {
     expect(onClick).toHaveBeenCalledTimes(1)
   })
 
-  test('carousel display the children', () => {
-    const text = 'hello'
-    render(
-      <PrevSlideAction>
-        <button>{text}</button>
-      </PrevSlideAction>
-    )
-  })
-
   test('carousel actions call onclick on click children', () => {
     const text = 'hello'
     const onClick = jest.fn()
