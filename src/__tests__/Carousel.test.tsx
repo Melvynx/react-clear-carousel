@@ -3,10 +3,10 @@ import { render, screen } from '@testing-library/react'
 import { NextSlideAction, PrevSlideAction } from '../CarouselActions'
 import { CarouselWrapper } from '../CarouselWrapper'
 import { CarouselElement } from '../CarouselElement'
-import { SliderElementProps } from '../types'
+import { CarouselWrapperProps, ElementId, SliderElementProps } from '../types'
 import userEvent from '@testing-library/user-event'
 
-export type DatasTypes = { id: number; text: string; color: string }
+export type DatasTypes = ElementId & { text: string; color: string }
 
 export const datas: DatasTypes[] = [
   { id: 0, text: 'McNab', color: '#9b59b6' },
@@ -27,7 +27,7 @@ export const datas: DatasTypes[] = [
 const classes = { root: 'rootClassname', element: 'elementBoxClassname' }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-function Carousel({ ...props }: any) {
+function Carousel(props: any) {
   return (
     <div>
       <CarouselWrapper datas={datas} {...props}>

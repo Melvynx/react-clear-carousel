@@ -5,7 +5,6 @@ import { CarouselWrapper, useCarouselCurrentSlide } from '../CarouselWrapper'
 import { CarouselElement } from '../CarouselElement'
 import { SliderElementProps } from '../types'
 import userEvent from '@testing-library/user-event'
-// import userEvent from '@testing-library/user-event'
 
 export type DatasTypes = { id: number; text: string; color: string }
 
@@ -17,7 +16,6 @@ export const datas: DatasTypes[] = [
 
 const classes = { root: 'rootClassname', element: 'elementBoxClassname' }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function Carousel() {
   return (
     <div>
