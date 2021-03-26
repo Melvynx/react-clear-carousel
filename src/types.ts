@@ -39,7 +39,6 @@ export type CarouselWrapperProps<T extends ElementId> = {
   reverse?: boolean
   children: React.ReactElement | React.ReactElement[]
   transition?: string
-  enableCurrentSlideHook?: boolean
 }
 
 export type SliderElementProps<T extends ElementId> = {

@@ -7,9 +7,10 @@ export default function getInteractiveExempleCode(props: {
   return (
     <div${props.one ? ' style={{ width: 116px }}' : ''}>
       <CarouselWrapper
-        transition="${props.transition}"${
-    props.reverse ? '\n        reverse' : ''
-  }
+        transition="${
+          props.transition.slice(0, 42) +
+          (props.transition.length > 42 ? '...' : '')
+        }"${props.reverse ? '\n        reverse' : ''}
         datas={datas}
         currentSize={{ element: 116, margin: 10 }}>
         <CarouselElement>

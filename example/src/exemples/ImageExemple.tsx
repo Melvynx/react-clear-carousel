@@ -26,7 +26,6 @@ const ImageExemple = () => {
       alignItems='center'>
       <CarouselWrapper
         datas={imageDatas}
-        enableCurrentSlideHook
         currentSize={{ element: 400, margin: 16 }}>
         <Block display='flex' alignItems='center'>
           <PrevSlideAction>

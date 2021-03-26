@@ -22,8 +22,7 @@ export function CarouselWrapper<T extends ElementId>({
   currentSize,
   children,
   reverse,
-  transition,
-  enableCurrentSlideHook
+  transition
 }: CarouselWrapperProps<T>) {
   const {
     classes,
@@ -45,13 +44,9 @@ export function CarouselWrapper<T extends ElementId>({
 
   return (
     <CarouselWrapperContext.Provider value={value}>
-      {enableCurrentSlideHook ? (
-        <CarouselCurrentSlideContext.Provider value={{ currentSlide }}>
-          {children}
-        </CarouselCurrentSlideContext.Provider>
-      ) : (
-        children
-      )}
+      <CarouselCurrentSlideContext.Provider value={{ currentSlide }}>
+        {children}
+      </CarouselCurrentSlideContext.Provider>
     </CarouselWrapperContext.Provider>
   )
 }

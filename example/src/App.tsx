@@ -14,9 +14,7 @@ export default function Hello() {
         <Block
           backgroundColor='backgroundPrimary'
           display='flex'
-          minHeight='100vh'
-          padding={['8px', '16px', '32px']}
-        >
+          padding={['8px', '16px', '32px']}>
           <Exemples />
         </Block>
       </BaseProvider>

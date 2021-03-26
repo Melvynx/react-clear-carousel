@@ -5,12 +5,11 @@ import { StyledLink } from 'baseui/link'
 import InteractiveExemple from './exemples/InteractiveExemple'
 import ImageExemple from './exemples/ImageExemple'
 import ExempleWrapper from './exemples/ExempleWrapper'
-import { useStyletron } from 'baseui'
 import { Paragraph2 } from 'baseui/typography'
+import GithubLogo from './logo/GithubLogo'
+import NpmLogo from './logo/NpmLogo'
 
 export default function Exemples() {
-  const [css] = useStyletron()
-
   return (
     <Block
       margin='auto'
@@ -32,32 +31,29 @@ export default function Exemples() {
           display='flex'
           flexDirection='column'
           alignItems='center'>
-          <Paragraph2>Simple react carousel easy to integrate.</Paragraph2>
+          <Paragraph2>Clear carousel easy to integrate.</Paragraph2>
           <Block display='flex' alignItems='center'>
-            <StyledLink href='https://github.com'>
-              <img
-                src='https://www.nicepng.com/png/full/52-520535_free-files-github-github-icon-png-white.png'
-                className={css({
-                  width: '64px',
-                  height: 'auto',
-                  margin: '8px'
-                })}
-                alt='github logo'
-              />
+            <StyledLink
+              className='big-link-margin'
+              href='https://github.com/Melvynx/react-clear-carousel'>
+              <GithubLogo />
+            </StyledLink>
+            <StyledLink
+              className='big-link-margin'
+              href='https://www.npmjs.com/package/react-clear-carousel'>
+              <NpmLogo />
             </StyledLink>
           </Block>
         </Block>
         <ExempleWrapper
           title='Interactive example'
-          description='Carousel with very little basic code. It is possible to see several cards. Try clicking on a card, it will be displayed first.'>
+          description='Few codes are needed to have a nice result. Here is an interactive example to try different props.'>
           <InteractiveExemple />
         </ExempleWrapper>
         <ExempleWrapper
-          title='Exemple 2'
-          description='It is easy to customize the carousel and add images. You can access the index of the current slide to create a pagination.'>
-          <>
-            <ImageExemple />
-          </>
+          title='Customization example'
+          description='Customization is simple. The index of the slide displayed is easily accessible.'>
+          <ImageExemple />
         </ExempleWrapper>
       </HeadingLevel>
     </Block>
