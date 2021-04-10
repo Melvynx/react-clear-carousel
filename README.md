@@ -1,5 +1,7 @@
 # react-clear-carousel
 
+<img width="1715" alt="Capture d’écran 2021-04-10 à 18 44 10" src="https://user-images.githubusercontent.com/56388157/114277797-069b9f00-9a2d-11eb-8446-72b649072793.png">
+
 [![npm minified size](https://img.shields.io/bundlephobia/min/react-clear-carousel?style=flat-square)](https://www.npmjs.com/package/react-clear-carousel)
 [![package version](https://img.shields.io/npm/v/react-clear-carousel?style=flat-square)](https://www.npmjs.com/package/react-clear-carousel)
 [![license](https://img.shields.io/npm/l/react-clear-carousel?style=flat-square)](https://www.npmjs.com/package/react-clear-carousel)
