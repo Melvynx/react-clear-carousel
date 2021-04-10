@@ -35,6 +35,9 @@ It is a carousel that will be customizable and offers great posibilities.
 
 Go test the demo online [react-clear-carousel demo](https://melvynx.github.io/react-clear-carousel/).
 
+![gggg](https://user-images.githubusercontent.com/56388157/114277860-495d7700-9a2d-11eb-80d7-6b69143a0aea.gif)
+
+
 ## Why
 
 I needed to make a really simple carousel. I looked for a library, but none was as light, simple and modular as I wanted.
