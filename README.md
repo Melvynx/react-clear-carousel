@@ -1,11 +1,34 @@
-# react-clear-carousel
+<p align="center">
+  <img width="1715" alt="Capture d’écran 2021-04-10 à 18 44 10" src="https://user-images.githubusercontent.com/56388157/114277797-069b9f00-9a2d-11eb-8446-72b649072793.png">
+</p>
 
-<img width="1715" alt="Capture d’écran 2021-04-10 à 18 44 10" src="https://user-images.githubusercontent.com/56388157/114277797-069b9f00-9a2d-11eb-8446-72b649072793.png">
-
-[![npm minified size](https://img.shields.io/bundlephobia/min/react-clear-carousel?style=flat-square)](https://www.npmjs.com/package/react-clear-carousel)
-[![package version](https://img.shields.io/npm/v/react-clear-carousel?style=flat-square)](https://www.npmjs.com/package/react-clear-carousel)
-[![license](https://img.shields.io/npm/l/react-clear-carousel?style=flat-square)](https://www.npmjs.com/package/react-clear-carousel)
-[![typescript](https://shields-staging.herokuapp.com/badge/types-TypeScript-%232f74c0?style=flat-square&logo=appveyor)](https://www.npmjs.com/package/react-clear-carousel)
+<p align="center">
+  <a href="https://www.npmjs.com/package/react-clear-carousel"
+    ><img
+      src="https://img.shields.io/bundlephobia/min/react-clear-carousel?style=flat-square"
+      alt="npm minified size"
+  /></a>
+  <a href="https://www.npmjs.com/package/react-clear-carousel"
+    ><img
+      src="https://img.shields.io/npm/v/react-clear-carousel?style=flat-square"
+      alt="package version"
+  /></a>
+  <a href="https://www.npmjs.com/package/react-clear-carousel"
+    ><img
+      src="https://img.shields.io/npm/l/react-clear-carousel?style=flat-square"
+      alt="license"/></a
+  ><br />
+  <a href="https://www.npmjs.com/package/react-clear-carousel"
+    ><img
+      src="https://shields-staging.herokuapp.com/badge/types-TypeScript-%232f74c0?style=flat-square&logo=appveyor"
+      alt="Chat on Discord"
+  /></a>
+  <a href="https://twitter.com/StarshipPrompt"
+    ><img
+      src="https://img.shields.io/badge/twitter-@StarshipPrompt-1DA1F3?style=flat-square"
+      alt="typescript"
+  /></a>
+</p>
 
 Clear react carousel easy to integrate, he is very light and use 0 dependency.
 It is a carousel that will be customizable and offers great posibilities.
