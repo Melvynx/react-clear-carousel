@@ -10,6 +10,11 @@ It is a carousel that will be customizable and offers great posibilities.
 
 Go test the demo online [react-clear-carousel demo](https://melvynx.github.io/react-clear-carousel/).
 
+## Why
+
+I needed to make a really simple carousel. I looked for a library, but none was as light, simple and modular as I wanted.
+So I made my carousel and once finished I wanted to share it.
+
 ## Install
 
 ```bash
