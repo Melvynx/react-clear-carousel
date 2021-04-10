@@ -30,20 +30,27 @@
   /></a>
 </p>
 
+<img
+  src="https://user-images.githubusercontent.com/56388157/114277860-495d7700-9a2d-11eb-80d7-6b69143a0aea.gif"
+  alt="Starship with iTerm2 and the Snazzy theme"
+  width="50%"
+  style="margin: 4px"
+  align="right"
+/>
+
 Clear react carousel easy to integrate, he is very light and use 0 dependency.
 It is a carousel that will be customizable and offers great posibilities.
 
 Go test the demo online [react-clear-carousel demo](https://melvynx.github.io/react-clear-carousel/).
-
-![gggg](https://user-images.githubusercontent.com/56388157/114277860-495d7700-9a2d-11eb-80d7-6b69143a0aea.gif)
-
 
 ## Why
 
 I needed to make a really simple carousel. I looked for a library, but none was as light, simple and modular as I wanted.
 So I made my carousel and once finished I wanted to share it.
 
-## Install
+## Quick startup 🚀
+
+#### - Install the npm dependency in a react project
 
 ```bash
 npm install --save react-clear-carousel
@@ -51,7 +58,9 @@ npm install --save react-clear-carousel
 yarn add react-clear-carousel
 ```
 
-## Usage
+## Usage 🛠
+
+This is the most minimal exemple.
 
 ```tsx
 import React from 'react'
@@ -105,9 +114,11 @@ const Element = ({
 }
 ```
 
-## API
+## API 👁
 
 #### useSimpleSlider
+
+This hook is used by the CarouselWrapper.
 
 ```ts
 import { useSimpleSlider } from 'react-clear-carousel'
@@ -158,6 +169,8 @@ function CarouselWrapper<T extends ElementId>(props: CarouselWrapperProps<T>)
 
 #### CarouselElement
 
+This element use the context of CarouselWrapper.
+
 ```ts
 import { CarouselElement } from 'react-clear-carousel'
 
@@ -171,6 +184,10 @@ function CarouselElement(props: HorizontalSliderProps)
 ```
 
 #### NextSlideAction
+
+Those elements use the context of CarouselWrapper.
+
+The children will have a `onClick` props to handle next / prev slide.
 
 ```tsx
 import { NextSlideAction, PrevSlideAction } from 'react-simple-slider'
@@ -186,8 +203,6 @@ const Buttons = () => (
   </div>
 )
 ```
-
-The children will have a `onClick` props to handle next / prev slide.
 
 ## License
 
