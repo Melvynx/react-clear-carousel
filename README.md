@@ -118,6 +118,11 @@ const Element = ({
 
 The carousel is a delimited element that has an `overflow: hidden` (🟠 orange box) with a much longer child (🔵 blue box) that contains the slides (🟢 green box) and that will change the number of pixels to be moved to the left during a slide animation.
 
+<img
+  src="https://user-images.githubusercontent.com/56388157/114301277-75780700-9ac4-11eb-98c8-bc35cac0d6c9.png"
+  alt="schema exemple"
+/>
+
 ## API 👁
 
 #### useSimpleSlider
