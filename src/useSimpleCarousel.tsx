@@ -9,6 +9,7 @@ export function useSimpleCarousel({
   transition
 }: SimpleSliderConfig) {
   const [currentSlide, setCurrentSlide] = React.useState(0)
+
   const classes = useSimpleCarouselStyles({
     size,
     currentSlide,
@@ -22,8 +23,10 @@ export function useSimpleCarousel({
   const prevSlide = () =>
     setCurrentSlide((p) => (p - 1 < 0 ? listLength - 1 : p - 1))
 
-  const setSlide = (slide: number) =>
-    slide >= 0 && slide <= listLength && setCurrentSlide(slide)
+  const setSlide = (slide: number | ((prevSlide: number) => number)) =>
+    typeof slide === 'function'
+      ? setCurrentSlide(slide)
+      : slide >= 0 && slide <= listLength && setCurrentSlide(slide)
 
   return { nextSlide, prevSlide, setSlide, classes, currentSlide }
 }

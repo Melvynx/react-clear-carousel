@@ -38,8 +38,16 @@ export function CarouselWrapper<T extends ElementId>({
   })
 
   const value = React.useMemo(
-    () => ({ nextSlide, prevSlide, classes, setSlide, elementsDatas: datas }),
-    []
+    () => ({
+      nextSlide,
+      prevSlide,
+      classes,
+      setSlide,
+      elementsDatas: datas,
+      currentSize,
+      datasLength: datas.length
+    }),
+    [datas]
   )
 
   return (

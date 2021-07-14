@@ -30,9 +30,9 @@ export default function getInteractiveExempleCode(props: {
 const Element = ({ className, data }: SliderElementProps<DatasTypes>) => {
   return (
     <div className={className}>
-      <Block backgroundColor={data?.color}>
+      <div style={{ backgroundColor: data?.color, margin: "8px"}}>
         <p>{data?.text}</p>
-      </Block>
+      </div>
     </div>
   )
 }`

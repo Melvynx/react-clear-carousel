@@ -8,7 +8,7 @@ export function useSimpleCarouselStyles({
   size,
   currentSlide,
   reverse,
-  transition
+  transition = 'transform .3s ease-in-out'
 }: CarouselStylesProps) {
   const uniqueId = React.useRef(
     'slider' + Math.random().toString(36).substr(2, 9)
@@ -43,10 +43,10 @@ export function useSimpleCarouselStyles({
 }
 
 .${currentClasses.flexBox} {
-  transition: ${transition ? transition : 'transform .3s ease-in-out'};
+  transition: ${transition};
   transform: translate(${reverse ? '+' : '-'}${translatePixel}px);
   display: flex;
-  ${reverse ? 'flex-direction: row-reverse' : ''}
+  ${reverse ? 'flex-direction: row-reverse' : ''};
 }`
   }, [classes, currentSlide, size.element, size.margin, reverse, transition])
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useCarouselContext } from './CarouselWrapper'
+import DragCarouselElement from './DragCarouselElement'
 import './styles.css'
 import { clsx } from './utils'
 
@@ -14,24 +15,20 @@ export function CarouselElement({
   rootClassname,
   elementBoxClassname
 }: HorizontalSliderProps) {
-  const {
-    elementsDatas: elementsData,
-    classes,
-    setSlide
-  } = useCarouselContext()
+  const { elementsDatas: elementsData, classes } = useCarouselContext()
 
   return (
     <div className={clsx(rootClassname, classes?.root)}>
-      <div className={clsx(classes?.flexBox, elementBoxClassname)}>
-        {elementsData.map((data, i) => (
-          <div key={data.id} onClick={() => setSlide?.(i)}>
+      <DragCarouselElement elementBoxClassname={elementBoxClassname}>
+        {elementsData.map((data) => (
+          <div key={data.id}>
             {React.cloneElement(children, {
               className: clsx(children.props.className, classes?.card),
               data
             })}
           </div>
         ))}
-      </div>
+      </DragCarouselElement>
     </div>
   )
 }

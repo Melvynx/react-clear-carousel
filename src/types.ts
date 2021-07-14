@@ -24,9 +24,11 @@ export interface ElementId {
 export type CarouselContextProps = {
   nextSlide?: () => void
   prevSlide?: () => void
-  setSlide?: (slideIndex: number) => void
+  setSlide?: (slide: number | ((prevSlide: number) => number)) => void
   elementsDatas: ElementId[]
   classes?: { card: string; flexBox: string; root: string }
+  currentSize?: ElementSize
+  datasLength?: number
 }
 
 export type CarouselCurrentSlideContextProps = {

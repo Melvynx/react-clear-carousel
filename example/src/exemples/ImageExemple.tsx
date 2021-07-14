@@ -1,5 +1,9 @@
-import React from 'react'
+import { useStyletron } from 'baseui'
 import { Block } from 'baseui/block'
+import { Button } from 'baseui/button'
+import { ArrowLeft, ArrowRight } from 'baseui/icon'
+import { Pagination, SIZE } from 'baseui/pagination'
+import React from 'react'
 import {
   CarouselElement,
   CarouselWrapper,
@@ -9,18 +13,17 @@ import {
   useCarouselContext,
   useCarouselCurrentSlide
 } from 'react-clear-carousel'
-import { useStyletron } from 'baseui'
-import { Button } from 'baseui/button'
 import { imageDatas } from './datas'
-import { ArrowRight, ArrowLeft } from 'baseui/icon'
-import { Pagination, SIZE } from 'baseui/pagination'
+import { useMediaQuery } from './useMediaQuery'
 
 const ImageExemple = () => {
   const [css, theme] = useStyletron()
+  const matches = useMediaQuery('(max-width: 400px)')
 
   return (
     <Block
       margin='8px'
+      width='100%'
       display='flex'
       flexDirection='column'
       alignItems='center'>
@@ -46,7 +49,7 @@ const ImageExemple = () => {
           </PrevSlideAction>
           <CarouselElement
             rootClassname={css({
-              width: '400px',
+              width: matches ? '250px' : '400px',
               border: `2px solid ${theme.colors.buttonSecondaryFill}`,
               borderRadius: '4px'
             })}>

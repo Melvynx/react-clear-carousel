@@ -23,15 +23,20 @@ const InteractiveExemple = () => {
   const [css, theme] = useStyletron()
 
   return (
-    <Block>
-      <Block width='100%' display='flex' justifyContent='center'>
+    <Block width='100%'>
+      <Block
+        width='100%'
+        display='flex'
+        justifyContent='center'
+        flexDirection={['column', 'column', 'row']}>
         <InteractiveExempleForm props={props} setProps={setProps} />
         <Block
+          width='100%'
           className={css({
             border: `1px solid ${theme.colors.backgroundTertiary}`
           })}
-          minWidth={['200px', '400px', '400px']}>
-          <Block width={props.one ? '116px' : ['200px', '400px', '400px']}>
+          minWidth={['200px', '200px', '400px']}>
+          <Block width={props.one ? '116px' : '100%'}>
             <CarouselWrapper
               transition={props.transition}
               reverse={props.reverse}
